@@ -1,0 +1,22 @@
+.floating-box {
+  position: absolute;
+  top: 300px;
+  width: 400px;
+  height: 300px;
+  background-color: yellow;
+}
+.header-container {
+  background-color: rgba(255, 255, 52, 0.5);
+}
+.main-header {
+  font-size: 3em;
+}
+.subheader {
+  font-size: 2em;
+}
+.cats {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  z-index: -1;
+}

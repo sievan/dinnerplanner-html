@@ -8,10 +8,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/common.css">
 
   </head>
   <body>
-	<div class="container">
+	<div class="container test-markup">
 		<h1>Dinner planner</h1>
 		<div id="exampleView">
 			<div>
@@ -24,15 +25,28 @@
 		</div>
 	</div>
 
+  <div class ="row header-container">
+    <div class="main-header col-md-4">HOMELETTE</div>
+    <div class="subheader col-md-8">From the best chefs in the world directly into your kitchen</div>
+  </div>
+  <img class="cats" src ="http://i.ytimg.com/vi/qEJZkX6_5Iw/maxresdefault.jpg"></img>
+  <div class ="floating-box">Inte så noga</div>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".test-markup").hide();
+      });
+    </script>
 	<!-- The application JavaScript code -->
 	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script>
 	<script src="js/view/exampleView.js"></script>
 	<script src="js/view/exampleViewController.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>
 </html>
