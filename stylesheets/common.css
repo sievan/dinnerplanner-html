@@ -22,6 +22,11 @@
   padding-bottom: 2em;
   margin-top: 6em;
 }
+.summary-box {
+  background-color: white;
+  opacity: 0.8;
+  padding-left: 3em;
+}
 .header-container {
   background-color: rgba(247, 225, 134, 0.7);
   height: 6em;

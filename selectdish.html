@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/common.css">
+
+  </head>
+  <body>
+	<div class="container test-markup">
+		<h1>Dinner planner</h1>
+		<div id="exampleView">
+			<div>
+				Number of guests: <span id="numberOfGuests"></span>
+			</div>
+			<div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+			</div>
+		</div>
+	</div>
+
+  <div class="row header-container">
+    <div class="main-header col-md-3">HOMELETTE</div>
+    <div class="sub-header col-md-9">From the best chefs in the world directly into your kitchen</div>
+  </div>
+  <div class="row">
+    <div class="summary-box col-md-2">
+      <h2>My Dinner</h2>
+      <p>People: 3+-</p>
+      <hr class="divider"/>
+      <p>Pending 0.0</p>
+      <hr class="divider"/>
+      <p>SEK 0.0</p>
+      <a href="#" id="start-button" class="btn">Confirm dinner</a>
+    </div>
+
+    <div class="info-box col-md-10">
+      <h1>My Dinner</h1>
+      <p>Bacon ipsum dolor amet corned beef doner picanha drumstick pancetta shankle. Strip steak tri-tip pastrami, meatloaf pork chop tail shankle ham.</p>
+    </div>
+    
+  </div>
+  <img class="cats" src ="http://i.ytimg.com/vi/qEJZkX6_5Iw/maxresdefault.jpg"></img>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".test-markup").hide();
+      });
+    </script>
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/exampleView.js"></script>
+	<script src="js/view/exampleViewController.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  </body>
+</html>
