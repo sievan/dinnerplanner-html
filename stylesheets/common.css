@@ -31,21 +31,24 @@
   border: 3px solid black;
   border-radius: 3px;
   margin-left: 1px;
+  margin-right: 1px;
 }
 .sub-header-container {
   background-color: rgba(247, 225, 134, 0.7);
-  height: 11em;
-  border: 3px solid black;
+  border: 1px solid black;
   border-radius: 3px;
-  margin-right: 1px;
-  margin-left: 1px;
 }
 /*Boxes*/
 .content-box {
   background-color: white;
-  height: 15em;
-  width: 100%;
-  border: 3px solid black;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+.sub-content-box {
+  background-color: white;
+  border: 1px solid black;
   border-radius: 3px;
 }
 .info-box {
@@ -56,12 +59,17 @@
 }
 .summary-box {
   background-color: white;
-  height: 100%;
-  width: 20%;
-  opacity: 0.8;
-  padding-left: 3em;
-  margin-left: 4px;
-  border: 2px solid black;
+  height: 20em;
+  padding-top: 1em;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.todo-box {
+  background-color: red;
+  opacity: 0.2;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 2em;
 }
 /*Fonts*/
 body{
@@ -79,13 +87,13 @@ body{
 }
 /*Deviders*/
 hr.divider {
-    border: 0;
-    height: 2px;
-    background: black;
-    background-image: -webkit-linear-gradient(left, #C9F, #63C, #C9F);
-    background-image: -moz-linear-gradient(left, #C9F, #63C, #C9F);
-    background-image: -ms-linear-gradient(left, #C9F, #63C, #C9F);
-    background-image: -o-linear-gradient(left, #C9F, #63C, #C9F);
+  border: 0;
+  height: 2px;
+  background: black;
+  background-image: -webkit-linear-gradient(left, #C9F, #63C, #C9F);
+  background-image: -moz-linear-gradient(left, #C9F, #63C, #C9F);
+  background-image: -ms-linear-gradient(left, #C9F, #63C, #C9F);
+  background-image: -o-linear-gradient(left, #C9F, #63C, #C9F);
 }
 /*Buttons*/
 #start-button {
@@ -96,6 +104,15 @@ hr.divider {
   font-size: 1.5em;
   color: black;
   box-shadow: 3px 3px 0px black;
+}
+#confirm-button {
+  background-color: orange;
+  border-radius: 0px;
+  border: 3px solid rgba(204, 204, 204, 1);
+  font-family: BalsamiqSansBold;
+  font-size: 1em;
+  color: rgba(204, 204, 204, 1);
+  box-shadow: 3px 3px 0px rgba(204, 204, 204, 1);
 }
 /*Pictures*/
 .cats {
