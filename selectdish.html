@@ -19,63 +19,162 @@
     <div class="row content-box">
       <div class="summary-box col-md-2">
         <h2>My Dinner</h2>
-        <div class="row sub-header-container">
+        <form>
+          <label for="number-people">People</label>
+          <input id="number-people"
+                 type="number"
+                 min="0"
+                 max="10"
+                 value="4">
+        </form>
+        <div class="row sub-header-container selectdish-box">
           <div>
             <div class="sub-content-box col-md-8">Dish</div>
             <div class="sub-content-box col-md-4">Cost</div>
           </div>
           <div>
-            <div class="sub-content-box col-md-2">2</div>
-            <div class="sub-content-box col-md-6">Garlic Bread</div>
-            <div class="sub-content-box col-md-4">4.50</div>
-            <div class="sub-content-box col-md-2">4</div>
-            <div class="sub-content-box col-md-6">Lasagna</div>
-            <div class="sub-content-box col-md-4">74.00</div>
-            <div class="sub-content-box col-md-2">7</div>
-            <div class="sub-content-box col-md-6">Cookies</div>
-            <div class="sub-content-box col-md-4">12.00</div>
-            <div class="sub-content-box col-md-2">#</div>
-            <div class="sub-content-box col-md-6">Pending</div>
-            <div class="sub-content-box col-md-4">0.00</div>
+            <div class="col-md-2">2</div>
+            <div class="col-md-6">Garlic Bread</div>
+            <div class="col-md-4">4.50</div>
+            <div class="col-md-2">2</div>
+            <div class="col-md-6">Garlic Bread</div>
+            <div class="col-md-4">4.50</div>
+            <div class="col-md-2">2</div>
+            <div class="col-md-6">Garlic Bread</div>
+            <div class="col-md-4">4.50</div>
+            <div class="col-md-2">2</div>
+            <div class="col-md-6">Garlic Bread</div>
+            <div class="col-md-4">4.50</div>
+            <div class="col-md-2">#</div>
+            <div class="col-md-6">Pending</div>
+            <div class="col-md-4">0.00</div>
           </div>
           <hr class="divider"/>
           <div>
             <div class="sub-content-box col-md-8">SEK</div>
             <div class="sub-content-box col-md-4">90.50</div>
           </div>
-          <a href="#" id="confirm-button" class="btn">Create new dinner</a>
+          <a href="confirmdinner.html" class="btn confirm-button">Confirm dinner</a>
         </div>
       </div>
       <div class="sub-content-box top-box col-md-10">
-        <div class="row sub-header-container">
+        <div class="row sub-header-container selectdish-box">
           <h2>SELECT DISH</h2>
           <hr class="divider"/>
-          <div class="todo-box col-md-4">Keyword + button</div>
-          <div class="todo-box col-md-4">Select type of dish + select from list</div>
+          <form class="form-inline">
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" placeholder="Enter key words">
+            </div>
+            <div class="form-group col-md-4">
+              <select>
+                <option value="main">Main</option>
+                <option value="apetizer">Apetizer</option>
+                <option value="dessert">Dessert</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </form>
         </div>
       </div>
       <div class="sub-content-box bottom-box col-md-10">
-        <br/>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
-        <div class="todo-box col-md-2"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img></div>
+      <div class="container">
+        <div class="row">
+          <div class="course-container col-md-2">
+            <a href="description.html">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+            </a>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+          <div class="course-container col-md-2">
+            <div class="course-box">
+              <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+              <div class="course-name">Taco!</div>
+            </div>
+            <div>
+            Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -86,14 +185,12 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-      $(document).ready(function() {
-        $(".test-markup").hide();
-      });
     </script>
   <!-- The application JavaScript code -->
   <script src="js/app.js"></script>
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
+  <script src="js/view/selectView.js"></script>
   <script src="js/view/exampleViewController.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>

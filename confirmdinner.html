@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/common.css">
+
+  </head>
+  <body>
+    <div class="row main-header-container">
+      <div class="main-header col-md-3">HOMELETTE</div>
+      <div class="sub-header col-md-9">From the best chefs in the world directly into your kitchen</div>
+    </div>
+    <div class="row content-box">
+      <div class="sub-content-box">
+        <div class="sub-header-container container-fluid">
+          <h2 class="mydinner-header col-md-9">My Dinner: 4 people</h2>
+          <div class="col-md-3">
+            <a href="selectdish.html" class="btn start-button">Go back and edit dinner</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        <div class="col-md-3">
+          <div class="course-box">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+            <div class="course-name">Taco!</div>
+          </div>
+        </div><div class="col-md-3">
+          <div class="course-box">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+            <div class="course-name">Taco!</div>
+          </div>
+        </div><div class="col-md-3">
+          <div class="course-box">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
+            <div class="course-name">Taco!</div>
+          </div>
+          <div class="course-price text-right">79.50 sek</div>
+        </div>
+        <div class="col-md-3">
+            <div class="vertical-line">
+                <p>Total:</p>
+                <div class="course-price">341.00SEK</div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <hr class="divider"/>
+      <div class="button-container">
+        <a href="print.html" class="start-button btn">Print Full Recipe</a>
+      <div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".test-markup").hide();
+      });
+    </script>
+  <!-- The application JavaScript code -->
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/exampleViewController.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+  </body>
+</html>
