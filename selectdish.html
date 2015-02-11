@@ -16,7 +16,7 @@
       <div class="main-header col-md-3">HOMELETTE</div>
       <div class="sub-header col-md-9">From the best chefs in the world directly into your kitchen</div>
     </div>
-    <div class="row content-box">
+    <div class="row content-box" id="select-view">
       <div class="summary-box col-md-2">
         <h2>My Dinner</h2>
         <form>
@@ -32,24 +32,8 @@
             <div class="sub-content-box col-md-8">Dish</div>
             <div class="sub-content-box col-md-4">Cost</div>
           </div>
-          <div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">#</div>
-            <div class="col-md-6">Pending</div>
-            <div class="col-md-4">0.00</div>
+          <div id="selected-dishes">
           </div>
-          <hr class="divider"/>
           <div>
             <div class="sub-content-box col-md-8">SEK</div>
             <div class="sub-content-box col-md-4">90.50</div>
@@ -191,7 +175,6 @@
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
   <script src="js/view/selectView.js"></script>
-  <script src="js/view/exampleViewController.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>
 </html>

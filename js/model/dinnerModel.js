@@ -36,11 +36,21 @@ var DinnerModel = function() {
 		return _.uniq(_.flatten(ingredients));
 	};
 
+	this.getDishPrice = function(id) {
+		price = 0;
+		dish = this.getDish(id);
+		console.log(dish);
+		dish.ingredients.forEach(function(ingredient) {
+			price += ingredient.price;
+		});
+		return price;
+	};
+
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		unitCost = 0;
 		dishes.forEach(function(dish) {
-			unitCost += _.pluck(dish.ingredient, 'price');
+			unitCost += this.getDishPrice(dish.id);
 		});
 		return unitCost * this.numberOfGuests;
 	};
