@@ -135,6 +135,9 @@ body{
   text-align: center;
   font-family: BalsamiqSansBold;
 }
+a {
+  color: black;
+}
 .sub-header {
   font-size: 1.5em;
   padding-top: 1em;
