@@ -16,6 +16,9 @@ var SelectView = function (container, model) {
     var menuContainer = container.find('#menu-container');
     menuContainer.append('<div class="course-container col-md-2"><a href="description.html"><div class="course-box"><img src="images/'+dish.image+'"></img><div class="course-name">'+dish.name+'</div></div><div>'+dish.description+'</div></a></div>')
   };
+  this.setMenuPrice = function() {
+    $('menu-price').html(model.getTotalMenuPrice());
+  }
 
 
 
