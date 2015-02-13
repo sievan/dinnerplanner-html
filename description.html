@@ -12,8 +12,8 @@
 
   </head>
   <body>
-    <div class="row main-header-container">
-      <div class="main-header col-md-3">HOMELETTE</div>
+    <div class="row" id="main-header-container">
+      <div class="main-header col-md-3"><a href="index.html">HOMELETTE</a></div>
       <div class="sub-header col-md-9">From the best chefs in the world directly into your kitchen</div>
     </div>
     <div class="row content-box">
@@ -32,22 +32,7 @@
             <div class="sub-content-box col-md-8">Dish</div>
             <div class="sub-content-box col-md-4">Cost</div>
           </div>
-          <div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">2</div>
-            <div class="col-md-6">Garlic Bread</div>
-            <div class="col-md-4">4.50</div>
-            <div class="col-md-2">#</div>
-            <div class="col-md-6">Pending</div>
-            <div class="col-md-4">0.00</div>
+          <div id="selected-dishes">
           </div>
           <hr class="divider"/>
           <div>
@@ -59,52 +44,13 @@
       </div>
       <div class="content-box description-box container-fluid">
         <div class="row">
-          <div class="container col-md-6">
-            <h1>LASAGNE</h1>
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFeakbzzvr3S2TgbZFC0TC2C94BhzxERbwLLmU0vdWndYp7OHh"></img>
-            <p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>
-            <a href="selectdish.html" class="btn start-button">Back to Select Dish</a>
-            <h2>PREPARATION</h2>
-            <p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>
+          <div class="container col-md-6" id="description-container">
+
           </div>
           <div class="ingredient-box container col-md-6">
             <h3>INGREDIENTS FOR 4 PEOPLE</h3>
             <hr class="divider"/>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">2 tbsp</div>
-              <div class="col-md-6">Garlic</div>
-              <div class="col-md-2">SEK</div>
-              <div class="col-md-2">4.50</div>
+            <div id="ingredient-container">
             </div>
             <hr class="divider"/>
             <div class="row">
@@ -131,12 +77,16 @@
       $(document).ready(function() {
         $(".test-markup").hide();
       });
+
     </script>
   <!-- The application JavaScript code -->
   <script src="js/app.js"></script>
   <script src="js/model/dinnerModel.js"></script>
   <script src="js/view/exampleView.js"></script>
-  <script src="js/view/exampleViewController.js"></script>
+  <script src="js/view/selectView.js"></script>
+  <script src="js/view/descriptionView.js"></script>
+  <script src="js/view/confirmView.js"></script>
+  <script src="js/view/printView.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>
 </html>

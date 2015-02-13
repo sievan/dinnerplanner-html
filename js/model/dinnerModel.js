@@ -1,6 +1,6 @@
 //DinnerModel Object constructor
 var DinnerModel = function() {
- 
+
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
@@ -12,7 +12,7 @@ var DinnerModel = function() {
 		this.numberOfGuests = num;
 	};
 
-	// should return 
+	// should return
 	this.getNumberOfGuests = function() {
 		return this.numberOfGuests;
 	};
@@ -39,7 +39,6 @@ var DinnerModel = function() {
 	this.getDishPrice = function(id) {
 		price = 0;
 		dish = this.getDish(id);
-		console.log(dish);
 		dish.ingredients.forEach(function(ingredient) {
 			price += ingredient.price;
 		});
@@ -90,8 +89,8 @@ var DinnerModel = function() {
 			}
 		}
 	  	return dish.type == type && found;
-	  });	
-	}
+	  });
+	};
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
@@ -100,7 +99,7 @@ var DinnerModel = function() {
 				return dishes[key];
 			}
 		}
-	}
+	};
 
 
 	// the dishes variable contains an array of all the 
@@ -117,7 +116,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'toast.jpg',
 		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'eggs',
 			'quantity':0.5,
 			'unit':'',

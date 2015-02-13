@@ -7,12 +7,14 @@ var SelectView = function (container, model) {
   model.addDishToMenu(1);
   model.addDishToMenu(3);
   model.addDishToMenu(100);
-  console.log(model.selectedDishes)
   // ----
   this.addDishToSelected = function(dish) {
-    var dishesContainer = container.find('#selected-dishes');
-
+    var dishesContainer = $('#selected-dishes');
     dishesContainer.append('<div class="col-md-8">'+dish.name+'</div><div class="col-md-4">'+model.getDishPrice(dish.id)+'</div>');
+  };
+  this.addDishToMenu = function(dish) {
+    var menuContainer = container.find('#menu-container');
+    menuContainer.append('<div class="course-container col-md-2"><a href="description.html"><div class="course-box"><img src="images/'+dish.image+'"></img><div class="course-name">'+dish.name+'</div></div><div>'+dish.description+'</div></a></div>')
   };
 
 
@@ -21,7 +23,9 @@ var SelectView = function (container, model) {
   _.each(model.selectedDishes,function(dish) {
     this.addDishToSelected(dish);
   }, this);
+  _.each(model.getAllDishes('main dish').toArray(), function(dish) {
+    this.addDishToMenu(dish);
+  }, this);
   this.addDishToSelected(model.getDish(1));
   this.numberOfGuests = container.find("#number-people");
-  console.log(this.numberOfGuests.attr('value'));
 };
