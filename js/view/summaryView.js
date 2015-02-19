@@ -22,7 +22,7 @@ var SummaryView = function (container, model) {
   };
 
   this.setMenuPrice = function() {
-    $('.menu-price').html(model.getTotalMenuPrice());
+    container.find('.menu-price').html(model.getTotalMenuPrice());
   };
 
   this.setNumberOfGuests = function(n) {

@@ -1,7 +1,7 @@
 var PrintView = function (container, model) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
-  console.log(model)
+
   // Test fixture
   model.addDishToMenu(1);
   model.addDishToMenu(3);
