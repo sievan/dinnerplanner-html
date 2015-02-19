@@ -5,15 +5,20 @@ var ConfirmView = function (container, model) {
   model.addDishToMenu(1);
   model.addDishToMenu(3);
   model.addDishToMenu(100);
+  model.setNumberOfGuests(4);
   // ----
   this.addDishToSelected = function(dish) {
-    var dishesContainer = container
+    var dishesContainer = container.find('#dinner-container')
     dishesContainer.append('<div class="col-md-3">'+
           '<div class="course-box">'+
             '<img src="images/'+dish.image+'"></img>'+
             '<div class="course-name">'+dish.name+'</div>'+
           '</div>'+
         '</div>');
+  };
+
+  this.setMenuPrice = function() {
+    container.find('.menu-price').html(model.getTotalMenuPrice());
   };
 
 
@@ -23,5 +28,5 @@ var ConfirmView = function (container, model) {
     this.addDishToSelected(dish);
   }, this);
   this.addDishToSelected(model.getDish(1));
-  this.numberOfGuests = container.find("#number-people");
+  this.setMenuPrice();
 };
