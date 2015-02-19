@@ -7,4 +7,5 @@ $(function() {
   var descriptionView = new DescriptionView($("body"), model);
   var confirmView = new ConfirmView($('#dinner-container'), model);
   var printView = new PrintView($('#print-view-box'), model);
+  var ingredientView = new IngredientView($("body"),model);
 });
