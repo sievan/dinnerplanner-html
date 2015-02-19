@@ -8,7 +8,7 @@ var PrintView = function (container, model) {
   model.addDishToMenu(100);
   // ----
   this.addDishToSelected = function(dish) {
-    var dishesContainer = container
+    var dishesContainer = container.find('#print-view-box')
     dishesContainer.append('<div class="row">'+
             '<div class="course-container course-box col-md-2"><img src="images/'+dish.image+'"></img></div>'+
             '<div class="course-container col-md-4">'+
@@ -22,6 +22,13 @@ var PrintView = function (container, model) {
                 '<p>'+dish.description+'</p>'+
             '</div>'+
         '</div>');
+  };
+
+  this.show =function() {
+    container.show();
+  };
+  this.hide = function() {
+    container.hide();
   };
 
 

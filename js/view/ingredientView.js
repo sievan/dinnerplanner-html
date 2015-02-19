@@ -31,6 +31,13 @@ var IngredientView = function (container, model) {
     container.find('#price-per-dish').html(model.getDishPrice(dish.id));
   };
 
+  this.show =function() {
+    container.show();
+  };
+  this.hide = function() {
+    container.hide();
+  };
+
 
   // Main
   this.setNumberOfGuests();

@@ -29,6 +29,14 @@ var SummaryView = function (container, model) {
     model.setNumberOfGuests(n);
   };
 
+  this.hide = function() {
+    container.hide();
+  };
+
+  this.show =function() {
+    container.show();
+  };
+
   // Main
   _.each(model.selectedDishes,function(dish) {
     this.addDishToSelected(dish);
