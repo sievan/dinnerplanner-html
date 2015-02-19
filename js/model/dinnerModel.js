@@ -74,6 +74,7 @@ var DinnerModel = function() {
 			return dish.id === id;
 		});
 		this.selectedDishes[selectedDish.type] = selectedDish;
+		this.notify();
 	}
 
 	//Removes dish from menu
@@ -81,6 +82,7 @@ var DinnerModel = function() {
 		_.reject(this.selectedDishes, function(dish) {
 			return dish.id === id;
 		});
+		this.notify();
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
