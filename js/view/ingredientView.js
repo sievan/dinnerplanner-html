@@ -33,8 +33,11 @@ var IngredientView = function (container, model) {
 
 
   // Main
-  console.log(container);
   this.setNumberOfGuests();
   this.addIngredients(testDish);
   this.setTotalPrice(testDish);
+  // _.each(model.getAllDishes('main dish').toArray(), function(dish) {
+  //   console.log('hej')
+  //   this.addDishToMenu(dish);
+  // }, this);
 };
