@@ -19,10 +19,4 @@ var DescriptionView = function (container, model) {
 
   // Main
   this.addDishToDescription(testDish);
-  // this.addIngredients(testDish);
-  // this.setTotalPrice(testDish);
-  // _.each(model.getAllDishes('main dish').toArray(), function(dish) {
-  //   console.log('hej')
-  //   this.addDishToMenu(dish);
-  // }, this);
 };
