@@ -14,7 +14,7 @@ var App = function(model) {
     selectController: new SelectController(views.selectView, model),
     descriptionController: new DescriptionController(views.descriptionView, model),
     ingredientController: new IngredientController(views.ingredientView, model),
-	sumheaderController: new SumheaderController(views.sumheaderView, model),
+    sumheaderController: new SumheaderController(views.sumheaderView, model),
     confirmController: new ConfirmController(views.confirmView, model)
   };
 

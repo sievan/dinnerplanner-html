@@ -7,5 +7,5 @@ var SumheaderController = function (view, model) {
     e.preventDefault();
     window.app.switchView('select');
   });
-  //this.addListeners();
+  this.addListeners();
 };
