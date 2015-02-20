@@ -9,8 +9,11 @@ var App = function(model) {
     ingredientView: new IngredientView($(".ingredient-container"),model),
     sumheaderView: new SumheaderView($(".sumheader-container"),model)};
 
-  var currentPage = 'index',
-      viewsShown = {
+  var controllers = {
+    summaryController: new SummaryController(views.summaryView, model)
+  };
+
+  var viewsShown = {
         select: function() {
           this.hideAll();
           views.selectView.show();
@@ -32,7 +35,6 @@ var App = function(model) {
           views.printView.show();
           views.sumheaderView.show();
         },
-        
         hideAll: function() {
           _.each(views, function(v, i) {
             v.hide();

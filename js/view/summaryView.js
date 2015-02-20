@@ -2,17 +2,9 @@ var SummaryView = function (container, model) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
 
-  // Set initial values
-  model.setNumberOfGuests($('#number-people').val());
-
-  // Fields
   var dishesContainer = $('#selected-dishes');
 
-  // Event listeners
-
-  $('#number-people').change(function(e) {
-    model.setNumberOfGuests($(e.target).val());
-  });
+  this.numberPeople = $('#number-people');
 
   this.addDishToSelected = function(dish) {
     dishesContainer.append('<div class="col-md-8">'+dish.name+'</div><div class="col-md-4">'+model.getDishPrice(dish.id)+'</div>');
@@ -42,12 +34,6 @@ var SummaryView = function (container, model) {
     this.setMenuPrice();
   };
 
-  this.addListeners = function() {
-    model.listenTo(this.update);
-  };
-
-  // Main
-  _.bindAll(this, 'update');
-  this.addListeners();
+  // Init
   this.update();
 };
