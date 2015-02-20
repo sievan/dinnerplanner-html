@@ -1,7 +1,6 @@
 var DescriptionController = function (view, model) {
-  this.addListeners = function() {
-    model.listenTo(view.update);
-  };
+  _.bindAll(view, 'update');
+  this.currentDish = undefined;
   this.selectDish = function(dish){
     view.update(model.getDish(dish));
     view.confirmButton.click(function(e) {
@@ -14,5 +13,4 @@ var DescriptionController = function (view, model) {
       window.app.switchView('select');
     });
   };
-  this.addListeners();
 };

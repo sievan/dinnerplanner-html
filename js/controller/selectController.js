@@ -1,8 +1,5 @@
 var SelectController = function (view, model) {
   _.bindAll(view, 'update');
-  this.addListeners = function() {
-    model.listenTo(view.update);
-  };
   categories = {
     Main: 'main dish',
     Dessert: 'dessert',
@@ -16,5 +13,4 @@ var SelectController = function (view, model) {
   view.dropDown.change(function(e) {
     view.update(categories[$(e.target).find('option:selected').text()]);
   });
-  this.addListeners();
 };
