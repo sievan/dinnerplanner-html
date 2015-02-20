@@ -7,5 +7,5 @@ var ConfirmController = function (view, model) {
     e.preventDefault();
     window.app.switchView('print');
   });
-  //this.addListeners();
+  this.addListeners();
 };

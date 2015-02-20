@@ -22,7 +22,6 @@ var ConfirmView = function (container, model) {
     container.hide();
   };
   this.update = function() {
-    console.log("Updating Confirm");
     dishesContainer.html('');
     _.each(model.selectedDishes,function(dish) {
       this.addDishToSelected(dish);
