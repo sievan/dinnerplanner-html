@@ -1,11 +1,11 @@
-var SumheaderController = function (view, model) {
+var ConfirmController = function (view, model) {
   _.bindAll(view, 'update');
   this.addListeners = function() {
     model.listenTo(view.update);
   };
-  view.backButton.click(function(e) {
+  view.printButton.click(function(e) {
     e.preventDefault();
-    window.app.switchView('select');
+    window.app.switchView('print');
   });
   //this.addListeners();
 };

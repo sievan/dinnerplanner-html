@@ -19,12 +19,12 @@ var SumheaderView = function (container, model) {
   this.update = function() {
     console.log("update");
     container.html('');
-    this.backButton = $('.back-button'); 
     this.setNumberOfGuests();
+    this.backButton = container.find('.back-button');
   };
 
   //Fields
-  this.backButton = $('.back-button'); 
+  this.backButton = container.find('.back-button'); 
 
   // Init
   this.update(); 
