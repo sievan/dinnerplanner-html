@@ -1,4 +1,5 @@
 var SelectController = function (view, model) {
+  _.bindAll(view, 'update');
   this.addListeners = function() {
     model.listenTo(view.update);
   };

@@ -26,7 +26,6 @@ var App = function(model) {
           views.descriptionView.show();
           views.summaryView.show();
           views.ingredientView.show();
-          console.log('kom hit',choice)
           controllers.descriptionController.selectDish(choice);
         },
         confirm: function() {
