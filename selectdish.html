@@ -87,7 +87,7 @@
           <hr class="divider"/>
           <div class="row">
             <div class="col-md-8">
-              <a href="selectdish.html" class="btn start-button">Confirm dish</a>
+              <a href="selectdish.html" class="btn start-button confirm-dish">Confirm dish</a>
             </div>
             <div class="col-md-2">SEK</div>
             <div class="col-md-2" id="price-per-dish"></div>
@@ -98,14 +98,10 @@
     </div>
 
     <!-- Confirm view -->
-
+    
     <div class="row content-box confirm-container">
       <div class="sub-content-box">
-        <div class="sub-header-container container-fluid">
-          <h2 class="mydinner-header col-md-9">My Dinner: 4 people</h2>
-          <div class="col-md-3">
-            <a href="selectdish.html" class="btn start-button back-button">Go back and edit dinner</a>
-          </div>
+        <div class="sub-header-container container-fluid sumheader-container">
         </div>
       </div>
       <div class="container">
@@ -127,15 +123,12 @@
     </div>
 
     <!-- Print view -->
-
-    <div class="container-fluid content-box print-container">
-      <div class="sub-header-container container-fluid print-header">
-        <h2 class="mydinner-header col-md-9">My Dinner: 4 people</h2>
-        <div class="col-md-3">
-          <a href="selectdish.html" class="btn start-button">Go back and edit dinner</a>
-        </div>
+    <div class="row print-container">
+      <div class="sub-header-container container-fluid print-header sumheader-container">
       </div>
-      <div class="container-fluid" id="print-view-box">
+      <div class="container-fluid content-box">
+        <div class="container-fluid" id="print-view-box">
+        </div>
       </div>
     </div>
 
@@ -154,6 +147,7 @@
   <script src="js/view/ingredientView.js"></script>
   <script src="js/view/confirmView.js"></script>
   <script src="js/view/printView.js"></script>
+  <script src="js/view/sumheaderView.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>
 </html>

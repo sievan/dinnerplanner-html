@@ -121,7 +121,6 @@ body, html {
 /* Print page */
 .print-container {
   overflow: scroll;
-  padding-top: 30px;
 }
 .print-header {
   border: 2px solid;
