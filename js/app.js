@@ -11,7 +11,8 @@ var App = function(model) {
 
   var controllers = {
     summaryController: new SummaryController(views.summaryView, model),
-    selectController: new SelectController(views.selectView, model)
+    selectController: new SelectController(views.selectView, model),
+    descriptionController: new DescriptionController(views.descriptionView, model)
   };
 
   var viewsShown = {
@@ -25,6 +26,7 @@ var App = function(model) {
           views.descriptionView.show();
           views.summaryView.show();
           views.ingredientView.show();
+          console.log('kom hit',choice)
           controllers.descriptionController.selectDish(choice);
         },
         confirm: function() {
@@ -45,7 +47,7 @@ var App = function(model) {
       };
 
   this.switchView = function(view, choice) {
-    viewsShown[view]();
+    viewsShown[view](choice);
   };
 };
 
