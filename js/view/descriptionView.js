@@ -8,7 +8,7 @@ var DescriptionView = function (container, model) {
   var testDish = model.getDish(1);
   // ----
   this.addDishToDescription = function(dish) {
-    var dishContainer = container.find('#description-container');
+    var dishContainer = container.find('#dish-description');
     dishContainer.append('<h1>'+dish.name+'</h1>' +
             '<img src="images/'+dish.image+'"></img>' +
             '<p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>'+
@@ -16,31 +16,12 @@ var DescriptionView = function (container, model) {
             '<h2>PREPARATION</h2>'+
             '<p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>');
   };
-  this.addIngredients = function(dish) {
-    var ingredientContainer = container.find('#ingredient-container');
-    _.each(dish.ingredients, function(ingredient) {
-      ingredientContainer.append('<div class="row">'+
-                '<div class="col-md-2">'+ingredient.quantity+'</div>'+
-                '<div class="col-md-6">'+ingredient.name+'</div>'+
-                '<div class="col-md-2">SEK</div>'+
-                '<div class="col-md-2">'+ingredient.price+'</div>'+
-              '</div>')
-    });
-  };
-  this.setTotalPrice = function(dish) {
-    container.find('#price-per-dish').html(model.getDishPrice(dish.id));
-  };
-
   this.show =function() {
     container.show();
   };
   this.hide = function() {
     container.hide();
   };
-
   // Main
   this.addDishToDescription(testDish);
-  this.addIngredients(testDish);
-  this.setTotalPrice(testDish);
-
 };

@@ -1,12 +1,12 @@
 var App = function(model) {
   // Views and model
   var views = {
-    selectView: new SelectView($("#select-view"), model),
-    summaryView: new SummaryView($(".summary-box"), model),
-    // descriptionView: new DescriptionView($(".description-container"), model),
+    selectView: new SelectView($(".select-container"), model),
+    summaryView: new SummaryView($(".summary-container"), model),
+    descriptionView: new DescriptionView($(".description-container"), model),
     confirmView: new ConfirmView($('.confirm-container'), model),
     printView: new PrintView($('.print-container'), model),
-    ingredientView: new IngredientView($(".ingredient-box"),model)};
+    ingredientView: new IngredientView($(".ingredient-container"),model)};
 
   var currentPage = 'index',
       viewsShown = {
@@ -23,12 +23,18 @@ var App = function(model) {
           this.hideAll();
           views.printView.show();
         },
+        description: function() {
+          this.hideAll();
+          views.descriptionView.show();
+          views.summaryView.show();
+          views.ingredientView.show();
+        },
         hideAll: function() {
           _.each(views, function(v, i) {
             v.hide();
           });
+          console.log("Hide all");
         }
-
       };
 
 

@@ -14,6 +14,10 @@ var SelectView = function (container, model, router) {
     e.preventDefault();
     window.app.switchView('confirm');
   });
+  $('.dish-picker').click(function(e) {
+    e.preventDefault();
+    window.app.switchView('description');
+  });
 
   this.addDishToMenu = function(dish) {
     var menuContainer = container.find('#menu-container');
