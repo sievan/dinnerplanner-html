@@ -9,18 +9,26 @@ var App = function(model) {
     ingredientView: new IngredientView($(".ingredient-container"),model),
     sumheaderView: new SumheaderView($(".sumheader-container"),model)};
 
-  var currentPage = 'index',
-      viewsShown = {
+  var controllers = {
+    summaryController: new SummaryController(views.summaryView, model),
+    selectController: new SelectController(views.selectView, model),
+    descriptionController: new DescriptionController(views.descriptionView, model),
+    ingredientController: new IngredientController(views.ingredientView, model)
+  };
+
+  var viewsShown = {
         select: function() {
           this.hideAll();
           views.selectView.show();
           views.summaryView.show();
         },
-        description: function() {
+        description: function(choice) {
           this.hideAll();
           views.descriptionView.show();
           views.summaryView.show();
           views.ingredientView.show();
+          controllers.descriptionController.selectDish(choice);
+          controllers.ingredientController.selectDish(choice);
         },
         confirm: function() {
           this.hideAll();
@@ -32,7 +40,6 @@ var App = function(model) {
           views.printView.show();
           views.sumheaderView.show();
         },
-        
         hideAll: function() {
           _.each(views, function(v, i) {
             v.hide();
@@ -40,10 +47,10 @@ var App = function(model) {
         }
       };
 
-  this.switchView = function(view) {
-    viewsShown[view]();
+  this.switchView = function(view, choice) {
+    viewsShown[view](choice);
   };
-}
+};
 
 $(function() {
 	//We instantiate our model

@@ -8,19 +8,8 @@ var DescriptionView = function (container, model) {
   // Fields
   var dishContainer = container.find('#dish-description');
 
-  // Events
-  $('.confirm-dish').click(function(e) {
-    e.preventDefault();
-    // add dish to menu
-    window.app.switchView('select');
-  });
-  $('.back-button').click(function(e) {
-    e.preventDefault();
-    window.app.switchView('select');
-  });
-
   // Functions
-   
+
   this.addDishToDescription = function(dish) {
     dishContainer.append('<h1>'+dish.name+'</h1>' +
             '<img src="images/'+dish.image+'"></img>' +
@@ -28,6 +17,7 @@ var DescriptionView = function (container, model) {
             '<a href="selectdish.html" class="btn start-button back-button">Back to Select Dish</a>'+
             '<h2>PREPARATION</h2>'+
             '<p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>');
+    this.backButton = dishContainer.find('.back-button')
   };
   this.show =function() {
     container.show();
@@ -35,10 +25,8 @@ var DescriptionView = function (container, model) {
   this.hide = function() {
     container.hide();
   };
-  this.update = function() {
+  this.update = function(dish) {
     dishContainer.html('');
-    this.addDishToDescription(testDish);
-  }
-  // Main
-  this.update();
+    this.addDishToDescription(dish);
+  };
 };
