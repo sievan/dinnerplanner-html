@@ -33,10 +33,8 @@ var App = function(model) {
           _.each(views, function(v, i) {
             v.hide();
           });
-          console.log("Hide all");
         }
       };
-
 
   this.switchView = function(view) {
     viewsShown[view]();

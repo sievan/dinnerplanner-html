@@ -33,16 +33,19 @@ var ConfirmView = function (container, model) {
   this.show =function() {
     container.show();
   };
+
   this.hide = function() {
     container.hide();
   };
 
-
+  this.update = function() {
+    dishesContainer.html('');
+    _.each(model.selectedDishes,function(dish) {
+      this.addDishToSelected(dish);
+    }, this);
+  };
 
   // Main
-  _.each(model.selectedDishes,function(dish) {
-    this.addDishToSelected(dish);
-  }, this);
-  this.addDishToSelected(model.getDish(1));
+  this.update();
   this.setMenuPrice();
 };

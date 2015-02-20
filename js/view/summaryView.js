@@ -5,14 +5,16 @@ var SummaryView = function (container, model) {
   // Set initial values
   model.setNumberOfGuests($('#number-people').val());
 
+  // Fields
+  var dishesContainer = $('#selected-dishes');
+
   // Event listeners
 
   $('#number-people').change(function(e) {
-    model.setNumberOfGuests(e.target.val);
+    model.setNumberOfGuests($(e.target).val());
   });
 
   this.addDishToSelected = function(dish) {
-    var dishesContainer = $('#selected-dishes');
     dishesContainer.append('<div class="col-md-8">'+dish.name+'</div><div class="col-md-4">'+model.getDishPrice(dish.id)+'</div>');
   };
 
@@ -32,9 +34,20 @@ var SummaryView = function (container, model) {
     container.show();
   };
 
+  this.update = function() {
+    dishesContainer.html('');
+    _.each(model.selectedDishes,function(dish) {
+      this.addDishToSelected(dish);
+    }, this);
+    this.setMenuPrice();
+  };
+
+  this.addListeners = function() {
+    model.listenTo(this.update);
+  };
+
   // Main
-  _.each(model.selectedDishes,function(dish) {
-    this.addDishToSelected(dish);
-  }, this);
-  this.setMenuPrice();
+  _.bindAll(this, 'update');
+  this.addListeners();
+  this.update();
 };
