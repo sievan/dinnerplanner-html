@@ -4,7 +4,8 @@ var SummaryView = function (container, model) {
 
   var dishesContainer = $('#selected-dishes');
 
-  this.numberPeople = $('#number-people');
+  this.numberPeople = container.find('#number-people');
+  this.confirmButton = container.find('.confirm-dinner');
 
   this.addDishToSelected = function(dish) {
     dishesContainer.append('<div class="col-md-8">'+dish.name+'</div><div class="col-md-4">'+model.getDishPrice(dish.id)+'</div>');

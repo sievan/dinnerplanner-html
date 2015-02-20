@@ -10,7 +10,8 @@ var App = function(model) {
     sumheaderView: new SumheaderView($(".sumheader-container"),model)};
 
   var controllers = {
-    summaryController: new SummaryController(views.summaryView, model)
+    summaryController: new SummaryController(views.summaryView, model),
+    selectController: new SelectController(views.selectView, model)
   };
 
   var viewsShown = {
@@ -19,11 +20,12 @@ var App = function(model) {
           views.selectView.show();
           views.summaryView.show();
         },
-        description: function() {
+        description: function(choice) {
           this.hideAll();
           views.descriptionView.show();
           views.summaryView.show();
           views.ingredientView.show();
+          controllers.descriptionController.selectDish(choice);
         },
         confirm: function() {
           this.hideAll();
@@ -42,10 +44,10 @@ var App = function(model) {
         }
       };
 
-  this.switchView = function(view) {
+  this.switchView = function(view, choice) {
     viewsShown[view]();
   };
-}
+};
 
 $(function() {
 	//We instantiate our model
