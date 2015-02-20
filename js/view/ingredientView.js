@@ -5,10 +5,12 @@ var IngredientView = function (container, model) {
   // Test fixture
   var testDish = model.getDish(1);
   // ----
-  
+
   // Fields
   var ingredientContainer = container.find('#ingredient-list');
-  
+
+  this.confirmButton = container.find('.confirm-dish');
+
   // Functions
 
   this.setNumberOfGuests = function() {
@@ -31,7 +33,7 @@ var IngredientView = function (container, model) {
     container.find('#price-per-dish').html(model.getDishPrice(dish.id));
   };
 
-  this.show =function() {
+  this.show = function() {
     container.show();
   };
 

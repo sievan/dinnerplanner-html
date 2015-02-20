@@ -17,7 +17,6 @@ var DescriptionView = function (container, model) {
             '<a href="selectdish.html" class="btn start-button back-button">Back to Select Dish</a>'+
             '<h2>PREPARATION</h2>'+
             '<p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>');
-    this.confirmButton = dishContainer.find('.confirm-dish');
     this.backButton = dishContainer.find('.back-button')
   };
   this.show =function() {
