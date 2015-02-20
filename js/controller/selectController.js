@@ -13,4 +13,6 @@ var SelectController = function (view, model) {
   view.dropDown.change(function(e) {
     view.update(categories[$(e.target).find('option:selected').text()]);
   });
+  // Init
+  view.update('main dish');
 };
