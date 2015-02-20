@@ -12,7 +12,8 @@ var App = function(model) {
   var controllers = {
     summaryController: new SummaryController(views.summaryView, model),
     selectController: new SelectController(views.selectView, model),
-    descriptionController: new DescriptionController(views.descriptionView, model)
+    descriptionController: new DescriptionController(views.descriptionView, model),
+    ingredientController: new IngredientController(views.ingredientView, model)
   };
 
   var viewsShown = {
@@ -27,6 +28,7 @@ var App = function(model) {
           views.summaryView.show();
           views.ingredientView.show();
           controllers.descriptionController.selectDish(choice);
+          controllers.ingredientController.selectDish(choice);
         },
         confirm: function() {
           this.hideAll();

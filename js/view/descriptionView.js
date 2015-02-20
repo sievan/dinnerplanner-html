@@ -11,7 +11,6 @@ var DescriptionView = function (container, model) {
   // Functions
 
   this.addDishToDescription = function(dish) {
-    console.log(dish)
     dishContainer.append('<h1>'+dish.name+'</h1>' +
             '<img src="images/'+dish.image+'"></img>' +
             '<p>Bacon ipsum dolor amet bresaola tongue short loin pig, sausage chuck kielbasa brisket shank filet mignon cupim venison jerky flank. Pork chop shankle shoulder pancetta andouille kielbasa meatball tongue tail ball tip.</p>'+
@@ -28,7 +27,6 @@ var DescriptionView = function (container, model) {
     container.hide();
   };
   this.update = function(dish) {
-    console.log(dish)
     dishContainer.html('');
     this.addDishToDescription(dish);
   };
