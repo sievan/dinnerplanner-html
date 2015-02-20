@@ -1,14 +1,23 @@
 var ConfirmView = function (container, model) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
-  // Test fixture
-  model.addDishToMenu(1);
-  model.addDishToMenu(3);
-  model.addDishToMenu(100);
-  model.setNumberOfGuests(4);
-  // ----
-  this.addDishToSelected = function(dish) {
-    var dishesContainer = container.find('#dinner-container')
+
+  // Fields
+
+  var dishesContainer = container.find('#dinner-container');
+
+  // Events
+  $('.back-button').click(function(e) {
+    e.preventDefault();
+    window.app.switchView('select');
+  });
+  $('.print-button').click(function(e) {
+    e.preventDefault();
+    window.app.switchView('print');
+  });
+
+  // Functions
+  this.addDishToSelected = function(dish, update) {
     dishesContainer.append('<div class="col-md-3">'+
           '<div class="course-box">'+
             '<img src="images/'+dish.image+'"></img>'+
@@ -21,12 +30,22 @@ var ConfirmView = function (container, model) {
     container.find('.menu-price').html(model.getTotalMenuPrice());
   };
 
+  this.show =function() {
+    container.show();
+  };
 
+  this.hide = function() {
+    container.hide();
+  };
+
+  this.update = function() {
+    dishesContainer.html('');
+    _.each(model.selectedDishes,function(dish) {
+      this.addDishToSelected(dish);
+    }, this);
+  };
 
   // Main
-  _.each(model.selectedDishes,function(dish) {
-    this.addDishToSelected(dish);
-  }, this);
-  this.addDishToSelected(model.getDish(1));
+  this.update();
   this.setMenuPrice();
 };

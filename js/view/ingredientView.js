@@ -3,11 +3,13 @@ var IngredientView = function (container, model) {
   // and/or ones that responed to interaction)
 
   // Test fixture
-  model.addDishToMenu(1);
-  model.addDishToMenu(3);
-  model.addDishToMenu(100);
   var testDish = model.getDish(1);
   // ----
+  
+  // Fields
+  var ingredientContainer = container.find('#ingredient-list');
+  
+  // Functions
 
   this.setNumberOfGuests = function() {
     var guestContainer = container.find('#ingredient-guests');
@@ -15,9 +17,7 @@ var IngredientView = function (container, model) {
   };
 
   this.addIngredients = function(dish) {
-    var ingredientContainer = container.find('#ingredient-container');
     _.each(dish.ingredients, function(ingredient) {
-      console.log('hej', ingredientContainer)
       ingredientContainer.append('<div class="row">'+
                 '<div class="col-md-2">'+ingredient.quantity+'</div>'+
                 '<div class="col-md-6">'+ingredient.name+'</div>'+
@@ -31,9 +31,20 @@ var IngredientView = function (container, model) {
     container.find('#price-per-dish').html(model.getDishPrice(dish.id));
   };
 
+  this.show =function() {
+    container.show();
+  };
+  
+  this.hide = function() {
+    container.hide();
+  };
+  
+  this.update = function() {
+    ingredientContainer.html('');
+    this.addIngredients(testDish);
+    this.setTotalPrice(testDish);
+  }
 
   // Main
-  this.setNumberOfGuests();
-  this.addIngredients(testDish);
-  this.setTotalPrice(testDish);
+  this.update();
 };

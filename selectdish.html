@@ -16,32 +16,38 @@
       <div class="main-header col-md-3"><a href="index.html">HOMELETTE</a></div>
       <div class="sub-header col-md-9">From the best chefs in the world directly into your kitchen</div>
     </div>
-    <div class="row content-box" id="select-view">
-      <div class="summary-box col-md-2">
-        <h2>My Dinner</h2>
-        <form>
-          <label for="number-people">People</label>
-          <input id="number-people"
-                 type="number"
-                 min="0"
-                 max="10"
-                 value="4">
-        </form>
-        <div class="row sub-header-container selectdish-box">
-          <div>
-            <div class="sub-content-box col-md-8">Dish</div>
-            <div class="sub-content-box col-md-4">Cost</div>
-          </div>
-          <div id="selected-dishes">
-          </div>
-          <div>
-            <div class="sub-content-box col-md-8">SEK</div>
-            <div class="sub-content-box col-md-4 menu-price">90.50</div>
-          </div>
-          <a href="confirmdinner.html" class="btn confirm-button">Confirm dinner</a>
+
+    <!-- Summary View -->
+
+    <div class="summary-container summary-box col-md-2">
+      <h2>My Dinner</h2>
+      <form>
+        <label for="number-people">People</label>
+        <input id="number-people"
+               type="number"
+               min="0"
+               max="10"
+               value="4">
+      </form>
+      <div class="row sub-header-container selectdish-box">
+        <div>
+          <div class="sub-content-box col-md-8">Dish</div>
+          <div class="sub-content-box col-md-4">Cost</div>
         </div>
+        <div id="selected-dishes">
+        </div>
+        <div>
+          <div class="sub-content-box col-md-8">SEK</div>
+          <div class="sub-content-box col-md-4 menu-price"></div>
+        </div>
+        <a href="confirmdinner.html" class="btn confirm-button confirm-dinner">Confirm dinner</a>
       </div>
-      <div class="sub-content-box top-box col-md-10">
+    </div>
+
+    <!-- Select view -->
+
+    <div class="select-container">
+      <div class="sub-content-box top-box col-md-10" >
         <div class="row sub-header-container selectdish-box">
           <h2>SELECT DISH</h2>
           <hr class="divider"/>
@@ -61,17 +67,75 @@
         </div>
       </div>
       <div class="sub-content-box bottom-box col-md-10">
-      <div class="container" id="menu-container">
-      </div>
+        <div class="container dish-picker" id="menu-container">
+        </div>
       </div>
     </div>
 
+    <!-- Description View -->
+
+    <div class="content-box description-container description-box container-fluid">
+      <div class="row">
+        <div class="container col-md-6" id="dish-description">
+        </div>
+        <div class="ingredient-box ingredient-container col-md-6">
+          <div id="ingredient-guests">
+          <hr class="divider"/>
+          </div>
+          <div id="ingredient-list">
+          </div>
+          <hr class="divider"/>
+          <div class="row">
+            <div class="col-md-8">
+              <a href="selectdish.html" class="btn start-button confirm-dish">Confirm dish</a>
+            </div>
+            <div class="col-md-2">SEK</div>
+            <div class="col-md-2" id="price-per-dish"></div>
+          </div>
+          </br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirm view -->
+    
+    <div class="row content-box confirm-container">
+      <div class="sub-content-box">
+        <div class="sub-header-container container-fluid sumheader-container">
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        <div id="dinner-container">
+        </div>
+        <div class="col-md-3">
+            <div class="vertical-line">
+                <p>Total:</p>
+                <div class="menu-price"></div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <hr class="divider"/>
+      <div class="button-container">
+        <a href="print.html" class="start-button btn print-button">Print Full Recipe</a>
+      </div>
+    </div>
+
+    <!-- Print view -->
+    <div class="row print-container">
+      <div class="sub-header-container container-fluid print-header sumheader-container">
+      </div>
+      <div class="container-fluid content-box">
+        <div class="container-fluid" id="print-view-box">
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-
     <script type="text/javascript">
     </script>
   <!-- The application JavaScript code -->
@@ -80,8 +144,10 @@
   <script src="js/view/summaryView.js"></script>
   <script src="js/view/selectView.js"></script>
   <script src="js/view/descriptionView.js"></script>
+  <script src="js/view/ingredientView.js"></script>
   <script src="js/view/confirmView.js"></script>
   <script src="js/view/printView.js"></script>
+  <script src="js/view/sumheaderView.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   </body>
 </html>
