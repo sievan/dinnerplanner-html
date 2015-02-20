@@ -6,6 +6,7 @@ var SelectView = function (container, model, router) {
   var menuContainer = container.find('#menu-container');
 
   this.dishLink = container.find('.dish-picker');
+  this.dropDown = container.find('select');
 
   // Functions
   this.addDishToMenu = function(dish) {
@@ -19,14 +20,10 @@ var SelectView = function (container, model, router) {
     container.hide();
   };
 
-  this.update = function() {
+  this.update = function(category) {
     menuContainer.html('');
-    _.each(model.getAllDishes('main dish').toArray(), function(dish) {
+    _.each(model.getAllDishes(category).toArray(), function(dish) {
       this.addDishToMenu(dish);
     }, this);
-  }
-
-  // Main
-
-  this.update();
+  };
 };

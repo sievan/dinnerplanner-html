@@ -17,7 +17,6 @@ var IngredientView = function (container, model) {
   };
 
   this.addIngredients = function(dish) {
-    console.log(dish)
     _.each(dish.ingredients, function(ingredient) {
       ingredientContainer.append('<div class="row">'+
                 '<div class="col-md-2">'+ingredient.quantity+'</div>'+
