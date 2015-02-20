@@ -46,6 +46,13 @@ var App = function(model) {
 $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
+  // Test fixture
+  model.addDishToMenu(1);
+  model.addDishToMenu(3);
+  model.addDishToMenu(100);
+  model.addDishToMenu(201);
+  model.setNumberOfGuests(4);
+  // ----
 	//And create the needed controllers and views
   window.app = new App(model);
   app.switchView('select')

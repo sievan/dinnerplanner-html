@@ -1,12 +1,10 @@
 var ConfirmView = function (container, model) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
-  // Test fixture
-  model.addDishToMenu(1);
-  model.addDishToMenu(3);
-  model.addDishToMenu(100);
-  model.setNumberOfGuests(4);
-  // ----
+
+  // Fields
+
+  var dishesContainer = container.find('#dinner-container');
 
   // Events
   $('.back-button').click(function(e) {
@@ -19,8 +17,7 @@ var ConfirmView = function (container, model) {
   });
 
   // Functions
-  this.addDishToSelected = function(dish) {
-    var dishesContainer = container.find('#dinner-container')
+  this.addDishToSelected = function(dish, update) {
     dishesContainer.append('<div class="col-md-3">'+
           '<div class="course-box">'+
             '<img src="images/'+dish.image+'"></img>'+

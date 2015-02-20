@@ -2,11 +2,6 @@ var SummaryView = function (container, model) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
 
-  // Test fixture
-  model.addDishToMenu(1);
-  model.addDishToMenu(3);
-  model.addDishToMenu(100);
-
   // Set initial values
   model.setNumberOfGuests($('#number-people').val());
 

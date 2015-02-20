@@ -3,11 +3,6 @@ var SelectView = function (container, model, router) {
   // Get all the relevant elements of the view (ones that show data
   // and/or ones that responed to interaction)
 
-  // Test fixture
-  model.addDishToMenu(1);
-  model.addDishToMenu(3);
-  model.addDishToMenu(100);
-  // ----
 
   // Events
   $('.confirm-dinner').click(function(e) {
