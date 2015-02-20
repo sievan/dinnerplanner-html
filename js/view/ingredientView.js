@@ -5,6 +5,11 @@ var IngredientView = function (container, model) {
   // Test fixture
   var testDish = model.getDish(1);
   // ----
+  
+  // Fields
+  var ingredientContainer = container.find('#ingredient-list');
+  
+  // Functions
 
   this.setNumberOfGuests = function() {
     var guestContainer = container.find('#ingredient-guests');
@@ -12,7 +17,6 @@ var IngredientView = function (container, model) {
   };
 
   this.addIngredients = function(dish) {
-    var ingredientContainer = container.find('#ingredient-list');
     _.each(dish.ingredients, function(ingredient) {
       ingredientContainer.append('<div class="row">'+
                 '<div class="col-md-2">'+ingredient.quantity+'</div>'+
@@ -30,13 +34,17 @@ var IngredientView = function (container, model) {
   this.show =function() {
     container.show();
   };
+  
   this.hide = function() {
     container.hide();
   };
-
+  
+  this.update = function() {
+    ingredientContainer.html('');
+    this.addIngredients(testDish);
+    this.setTotalPrice(testDish);
+  }
 
   // Main
-  this.setNumberOfGuests();
-  this.addIngredients(testDish);
-  this.setTotalPrice(testDish);
+  this.update();
 };
