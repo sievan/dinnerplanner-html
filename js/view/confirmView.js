@@ -22,6 +22,7 @@ var ConfirmView = function (container, model) {
     container.hide();
   };
   this.update = function() {
+    console.log("Updating Confirm");
     dishesContainer.html('');
     _.each(model.selectedDishes,function(dish) {
       this.addDishToSelected(dish);
@@ -32,7 +33,6 @@ var ConfirmView = function (container, model) {
 
   // Fields
   this.printButton = container.find('.print-button');
-  console.log(this.printButton);
 
   // Main
   this.update();

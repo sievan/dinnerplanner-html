@@ -17,7 +17,6 @@ var SumheaderView = function (container, model) {
     container.hide();
   };
   this.update = function() {
-    console.log("update");
     container.html('');
     this.setNumberOfGuests();
     this.backButton = container.find('.back-button');
