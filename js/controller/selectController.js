@@ -13,6 +13,10 @@ var SelectController = function (view, model) {
   view.dropDown.change(function(e) {
     view.update(categories[$(e.target).find('option:selected').text()]);
   });
+  view.input.on('input', function(e) {
+    filter = $(e.target).val();
+    view.update(categories[$('select option:selected').text()], filter);
+  });
   // Init
   view.update('main dish');
 };
